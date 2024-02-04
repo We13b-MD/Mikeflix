@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Home section*/
+body {
+  background-color: black;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.HomeContainer {
+  display: inline-flex;
+  margin-top: 150px;
+  margin-left: 100px;
+  background-color: black;
+}
+
+.HomeContainer .static-text {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+  margin-top: 60px;
+  background-color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.HomeContainer .dynamic-text {
+  margin-left: 15px;
+  line-height: 90px;
+  height: 90px;
+  background-color: black;
+  overflow: hidden;
+  margin-top: 50px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.dynamic-text li {
+  list-style: none;
+  color: red;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+
+  animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+.dynamic-text li {
+  position: relative;
+  background-color: ;
+}
+
+.dynamic-text li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  border-left: 2px solid red;
+  animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.line {
+  width: 1300px;
+  height: 20px;
+  background-color: #2c2c2c;
+  margin-top: 80px;
+}
+.line2 {
+  width: 1300px;
+  height: 20px;
+  background-color: #2c2c2c;
+  margin-top: 80px;
+}
+.headline {
+  display: flex;
+  justify-content: space-around;
+}
+.pheadline {
+  width: 500px;
+  height: 400px;
+  color: white;
+  margin-left: 750px;
+  margin-top: -440px;
+}
+.pheadline h1 {
+  margin-left: 20px;
+}
+
+.pheadline h2 {
+  font-size: 28px;
+  margin-left: -100px;
+}
+.pheadline h3 {
+  font-size: 28px;
+  margin-left: 100px;
+}
+
+.pheadline2 {
+  width: 500px;
+  height: 400px;
+  color: white;
+  margin-top: -200px;
+  margin-left: 50px;
+}
+.pheadline2 h1 {
+  margin-left: 20px;
+}
+
+.pheadline2 h2 {
+  font-size: 28px;
+  margin-left: -88px;
+}
+.pheadline2 h3 {
+  font-size: 28px;
+  margin-left: 32px;
+}
+.filmimage {
+  margin-top: 60px;
+  border: none;
+  margin-left: 160px;
+}
+
+.macbook {
+  margin-top: 60px;
+  margin-left: 600px;
+  height: 400px;
+  width: 600px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.loader {
+  margin-top: -160px;
+  margin-left: 860px;
+  position: relative;
+  transform: scale(2);
+  border-radius: 50%;
+  border: 1px solid;
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+
+.loader::after {
+  position: absolute;
+  width: 0px;
+  height: 10px;
+  display: block;
+  border-left: 1px solid #fff;
+  content: "";
+  left: 14px;
+  border-radius: 1px;
+  top: 4px;
+  animation-duration: 1s;
+}
+
+.loader::before {
+  position: absolute;
+  width: 0px;
+  height: 10px;
+  display: block;
+  border-left: 1px solid #fff;
+  content: "";
+  left: 14px;
+  border-radius: 1px;
+  top: 4px;
+  animation-duration: 40s;
+}
+
+.loader::before,
+.loader::after {
+  transform-origin: bottom;
+  animation-name: dial;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes dial {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.logoutbutton {
+  margin-left: 1200px;
+  margin-top: 150px;
+  cursor: pointer;
+  font-size: 40px;
+}
+.logoutbutton:hover {
+  color: red;
+}
+
+.welcome {
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 960px) {
+  .line {
+    width: 950px;
+    height: 20px;
+    background-color: #2c2c2c;
+    margin-top: 80px;
+  }
+  .line2 {
+    width: 1300px;
+    height: 20px;
+    background-color: #2c2c2c;
+    margin-top: 80px;
+  }
+  .HomeContainer {
+    background-color: black;
+  }
+
+  .pheadline {
+    width: 500px;
+    height: 400px;
+    color: white;
+    margin-left: 450px;
+    margin-top: 10px;
+  }
+
+  .filmimage {
+    margin-top: 60px;
+    border: none;
+    justify-content: center;
+    height: 300px;
+    margin-left: 360px;
+  }
+  .macbook {
+    margin-top: 60px;
+    margin-left: 300px;
+    height: 300px;
+    width: 360px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  }
+  .pheadline2 {
+    width: 500px;
+    height: 400px;
+    color: white;
+    margin-top: 450px;
+    margin-left: 400px;
+  }
+
+  .line2 {
+    width: 950px;
+    height: 20px;
+    background-color: #2c2c2c;
+    margin-top: 80px;
+  }
+  .loader {
+    margin-top: -160px;
+    margin-left: 440px;
+    position: relative;
+    transform: scale(2);
+    border-radius: 50%;
+    border: 1px solid;
+    width: 30px;
+    height: 30px;
+    color: white;
+  }
+
+  .pheadline h1 {
+    margin-left: -400px;
+    font-size: 30px;
+  }
+
+  .pheadline h2 {
+    font-size: 28px;
+    margin-left: -400px;
+  }
+  .pheadline h3 {
+    font-size: 28px;
+    margin-left: -40px;
+    font-size: 20px;
+  }
+  .pheadline2 h1 {
+    margin-left: -360px;
+    font-size: 30px;
+  }
+
+  .pheadline2 h2 {
+    font-size: 24px;
+    margin-left: -360px;
+  }
+  .pheadline2 h3 {
+    font-size: 20px;
+    margin-left: -20px;
+  }
+
+  .HomeContainer .static-text {
+    visibility: hidden;
+  }
+  .HomeContainer .dynamic-text {
+    visibility: hidden;
+  }
+
+  .logoutbutton {
+    margin-left: 700px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 40px;
+  }
+  .logoutbutton:hover {
+    color: red;
+  }
+
+  .welcome {
+    display: none;
+  }
+}
+
+/*Navbar Section*/

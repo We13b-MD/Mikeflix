@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
 
+import {useState} from 'react'
+
+import Home from "./Components/Home";
+import Login from './Components/Login'
+import Signup from './Components/Signup'
+import Singlemovie from './Components/Singlemovie'
+import {ShareProvider} from './CreateContext/SharedContext'
+import {UserProvider} from './CreateContext/userContext'
+import {useUser} from './CreateContext/userContext'
+import Movies from './Components/Movies'
+import Bookmark from './Components/Bookmarks'
+
+
+import { BrowserRouter as Router, Route, Routes, Redirect } from "react-router-dom";
 function App() {
+ const {isAuthenticated} = useUser()
+console.log('IsAuthenticated in App', isAuthenticated)
+ 
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       <Router>
+      
+       <UserProvider>
+        <ShareProvider>
+         
+       <Routes>
+          <Route path="/" element={<Home />}></Route>
+           <Route path="/movies" element={<Movies/>}></Route>
+          
+          <Route path="/movies/:slug/" element={<Singlemovie />} />
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/signup" element={<Signup/>}></Route>
+          <Route path="/movies/:slug" element={<Singlemovie/>}></Route>
+          <Route path = '/bookmark' element = {<Bookmark/>}></Route>
+        </Routes>
+        </ShareProvider>
+       </UserProvider>
+      
+      </Router>
     </div>
+  
   );
 }
 

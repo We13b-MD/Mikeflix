@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.form-background {
+  display: flex;
+  width: 1300px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background: url(batman.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.wrapper {
+  width: 420px;
+
+  background: transparent;
+  backdrop-filter: brightness(30%);
+  border: none;
+  outline: none;
+  border: 2px, solid rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+.wrapper .input-box {
+  margin-left: 60px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.input-box input {
+  padding: 10px;
+  width: 220px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+
+.user {
+  margin-left: -24px;
+  color: #2c2c2c;
+}
+.wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+  margin-top: 30px;
+}
+h4 {
+  margin-top: 40px;
+  margin-left: 180px;
+  color: red;
+}
+.remember {
+  color: red;
+  margin-left: 4px;
+  margin-top: 0px;
+
+  text-decoration: none;
+}
+.remember-forgot label input {
+  accent-color: red;
+  margin-right: 3px;
+}
+
+.forgot {
+  color: #2c2c2c;
+  text-decoration: none;
+}
+.register {
+  color: red;
+  text-decoration: none;
+}
+.register:hover {
+  text-decoration: underline;
+  color: #2c2c2c;
+}
+.forgot:hover {
+  text-decoration: underline;
+  color: #2c2c2c;
+}
+
+.pgoogle {
+  gap: 80px;
+  margin-top: 20px;
+  width: 300px;
+  height: 50px;
+  border: 2px solid red;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-left: 50px;
+  color: #2c2c2c;
+  /* Center the text inside the box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.remeber-forgot a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .button1 {
+  width: 150px;
+  height: 45px;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  margin-left: 52px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.google,
+.facebook,
+.twitter {
+  color: red;
+}
+
+.account {
+  color: #2c2c2c;
+}
+.login {
+  letter-spacing: 2px;
+  color: white;
+  margin-left: -32px;
+  margin-top: -10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper .register {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.register p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: -240px;
+}
+
+.register p a:hover {
+  text-decoration: underline;
+}
+
+/* style for loader*/
+
+.Loader {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border: 5px solid rgb(255, 17, 0);
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  animation: rot5 1s infinite;
+  margin-left: -50px;
+}
+
+@keyframes rot5 {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(180deg);
+    border-top-color: rgb(255, 17, 0);
+    border-bottom-color: rgb(255, 17, 0);
+    border-right-color: transparent;
+    border-left-color: transparent;
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 500px) and (min-width: 280px) {
+  .wrapper {
+    margin-left: 250px;
+  }
+}

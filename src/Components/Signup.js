@@ -27,7 +27,7 @@ function Signup() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/register", {
+      const response = await fetch("https://mike-flix-api.onrender.com/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -56,7 +56,7 @@ function Signup() {
       const userData = { googleId, email, name };
 
       const serverResponse = await fetch(
-        "http://localhost:5000/auth/google/callback",
+        "https://mike-flix-api.onrender.com/auth/google/callback",
         {
           method: "POST",
           headers: {

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { FaBackward, FaTrash, FaTimes, FaTrashAlt } from "react-icons/fa";
-import axios from "axios";
 import movieObject from "./movielist";
 import { Link } from "react-router-dom";
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaShare, FaBookmark, FaSearch } from "react-icons/fa";
-
+import axios from 'axios'
 import "../Cssfiles/movie.css";
 import { useSharecontext } from "../CreateContext/SharedContext";
 import { jwtDecode } from "jwt-decode";

@@ -137,7 +137,7 @@ function Movies({ movie }) {
                     <Link className="movieLink" to={`/movies/${movie.slug}`}>
                       <div className="grid-item">
                         <img
-                          src={`http://localhost:5000/movieuploads/${movie.thumbnail}`}
+                          src={`https://mikiflix.onrender.com/movieuploads/${movie.thumbnail}`}
                           alt={movie.title}
                         />
                         <div className="Image-overlay">
@@ -155,7 +155,7 @@ function Movies({ movie }) {
                     <Link className="movieLink" to={`/movies/${movie.slug}`}>
                       <div className="grid-item">
                         <img
-                          src={`http://localhost:5000/movieuploads/${movie.thumbnail}`}
+                          src={`https://mikiflix.onrender.com/movieuploads/${movie.thumbnail}`}
                           alt={movie.title}
                         />
                         <div className="Image-overlay">

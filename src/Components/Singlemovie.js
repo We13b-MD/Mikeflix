@@ -6,7 +6,7 @@ function Singlemovie() {
   const [data, setData] = useState([]);
   const urlSlug = useParams();
 
-  const baseUrl = `http://localhost:5000/api/movies/${urlSlug.slug}`;
+  const baseUrl = `https://mike-flix-api.onrender.com/api/movies/${urlSlug.slug}`;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -45,7 +45,7 @@ function Singlemovie() {
           </Link>
           <img
             className="image"
-            src={`http://localhost:5000/movieuploads/${data?.thumbnail}`}
+            src={`https://mike-flix-api.onrender.com/movieuploads/${data?.thumbnail}`}
             alt={data?.title}
           />
         </div>

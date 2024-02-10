@@ -5,7 +5,6 @@ import { FaShare, FaBookmark, FaSearch } from "react-icons/fa";
 import "../Cssfiles/movie.css";
 import { useSharecontext } from "../CreateContext/SharedContext";
 import { jwtDecode } from "jwt-decode";
-import axios from "axios";
 import movieObject from "./movielist";
 function Movies({ movie }) {
   const { addBookmark } = useSharecontext();

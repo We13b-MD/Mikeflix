@@ -6,7 +6,7 @@ function Singlemovie() {
   const [data, setData] = useState([]);
   const urlSlug = useParams();
 
-  const baseUrl = `https://mike-flix-api.onrender.com/api/movies/${urlSlug.slug}`;
+  const baseUrl = `https://movie-server-e3b57795d19a.herokuapp.com/api/movies/${urlSlug.slug}`;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -45,7 +45,7 @@ function Singlemovie() {
           </Link>
           <img
             className="image"
-            src={`https://mike-flix-api.onrender.com/movieuploads/${data?.thumbnail}`}
+            src={`https://movie-server-e3b57795d19a.herokuapp.com/movieuploads/${data?.thumbnail}`}
             alt={data?.title}
           />
         </div>

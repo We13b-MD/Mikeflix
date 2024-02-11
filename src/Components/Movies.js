@@ -9,7 +9,7 @@ import movieObject from "./movielist";
 function Movies({ movie }) {
   const { addBookmark } = useSharecontext();
   const navigate = useNavigate();
-  const baseUrl = "https://mike-flix-api.onrender.com/api/movies/";
+  const baseUrl = "https://movie-server-e3b57795d19a.herokuapp.com/api/movies/";
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [data, setData] = useState({});
@@ -28,7 +28,7 @@ function Movies({ movie }) {
   const handleSearch = async (e) => {
     try {
       const response = await fetch(
-        `https://mike-flix-api.onrender.com/search?q=${searchQuery}`
+        `https://movie-server-e3b57795d19a.herokuapp.com/search?q=${searchQuery}`
       );
       setSearchResults(response.data);
       if (response.data.length > 0) {
@@ -49,7 +49,7 @@ function Movies({ movie }) {
   }
 
   useEffect(() => {
-    fetch("https://mike-flix-api.onrender.com/api/movies")
+    fetch("https://movie-server-e3b57795d19a.herokuapp.com/api/movies")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Data fetching failed");
@@ -137,7 +137,7 @@ function Movies({ movie }) {
                     <Link className="movieLink" to={`/movies/${movie.slug}`}>
                       <div className="grid-item">
                         <img
-                          src={`https://mikiflix.onrender.com/movieuploads/${movie.thumbnail}`}
+                          src={`https://movie-server-e3b57795d19a.herokuapp.com/movieuploads/${movie.thumbnail}`}
                           alt={movie.title}
                         />
                         <div className="Image-overlay">
@@ -155,7 +155,7 @@ function Movies({ movie }) {
                     <Link className="movieLink" to={`/movies/${movie.slug}`}>
                       <div className="grid-item">
                         <img
-                          src={`https://mikiflix.onrender.com/movieuploads/${movie.thumbnail}`}
+                          src={`https://movie-server-e3b57795d19a.herokuapp.com/movieuploads/${movie.thumbnail}`}
                           alt={movie.title}
                         />
                         <div className="Image-overlay">
